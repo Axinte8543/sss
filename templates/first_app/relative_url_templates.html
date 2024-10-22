@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %} #incarcam tag-ul static 
+<html>
+  <head>
+    <title>My App</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">   
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <a href="{% url 'aplicatie:index' %}">Go to index</a>
+    <a href="{% url 'aplicatie:b' %}">Go to other</a> #link catre other.html
+    <a href="{% url 'admin:index' %}">Go to admin</a> #link catre admin
+</body>
+</html>  

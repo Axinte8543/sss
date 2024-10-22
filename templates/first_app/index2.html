@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %} #incarcam tag-ul static 
+<html>
+  <head>
+    <title>Django Level Two</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">   
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    
+    <div class="djangtwo">
+        {% if access_records %}
+           <table>
+            <thead>
+                <th>Site Name</th>
+                <th>Date Accessed</th>
+            </thead>
+        {% for record in access_records %}
+            <tr>
+                <td>{{ record.name }}</td>
+                <td>{{ record.date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+        {% else %}
+            <h2>Sorry, no data available.</h2>
+        {% endif %}       
+</div>
+    </body>
+</html>  

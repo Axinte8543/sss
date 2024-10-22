@@ -1,0 +1,1 @@
+print("Salut\nSalut\nSalut")

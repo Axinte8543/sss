@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+  </head>
+  <body>
+    <nav>
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'aplicatie:index' %}">Brand</a></li>
+                <li><a href="{% url 'admin:index' %}">Adnin</a></li>
+                <li><a href="{% url 'aplicatie:b' %}">Users</a></li>
+            
+            {% if user.is_autenticated %}
+                <li><a href="{% url 'aplicatie:t' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'aplicatie:s' %}">Login</a></li>
+            {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+   <div class="container">
+       {% block body_block %}
+       {% endblock %}
+   </div>   
+  </body>
+</html>
+
